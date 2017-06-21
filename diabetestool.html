@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Diabetes Risk Assessment Tool</title>
+    <link rel="stylesheet" type="text/css" href="diabetestool.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="diabetestool.js"></script>
+</head>
+<body>
+    <h1 id="pageheading">The Diabetes Ris Assessment Tool</h1>
+    <form name="checkDiabete" onsubmit="return false" class="list">
+        <fieldset>
+            <ul id="age">
+                <li><label for="age" class="label">How old are you?</label>
+                <li><input type="radio" name="age" value="0" onclick="getAge(this.value)">1-25
+                <li><input type="radio" name="age" value="5" onclick="getAge(this.value)">26-40
+                <li><input type="radio" name="age" value="8" onclick="getAge(this.value)">41-60
+                <input type="radio" name="age" value="10" onclick="getAge(this.value)">60+
+            </ul>
+            <ul id="bmi">
+                <li><label for="bmi" class="label">What is your BMI?</label>
+                <li><input type="radio" name="bmi" value="0" onclick="getBmi(this.value)">0-25
+                <li><input type="radio" name="bmi" value="0" onclick="getBmi(this.value)">26-30
+                <li><input type="radio" name="bmi" value="9" onclick="getBmi(this.value)">31-35
+                <li><input type="radio" name="bmi" value="10" onclick="getBmi(this.value)">35+
+            </ul>
+            <ul id="family">
+                <label for="family" class="label">Does anybody in your family have diabetes?</label>
+                <input type="radio" name="family" value="0" onclick="getFamily(this.value)">No.
+                <input type="radio" name="family" value="7" onclick="getFamily(this.value)">Grandparent
+                <input type="radio" name="family" value="15" onclick="getFamily(this.value)">Sibling
+                <input type="radio" name="family" value="15" onclick="getFamily(this.value)">Parent
+            </ul>
+            <ul id="diet">
+                <label for="diet" class="label">How would you describe your diet?</label>
+                <input type="radio" name="diet" value="0" onclick="getDiet(this.value)">Low sugar
+                <input type="radio" name="diet" value="0" onclick="getDiet(this.value)">Normal sugar
+                <input type="radio" name="diet" value="7" onclick="getDiet(this.value)">Quiet high sugar
+                <input type="radio" name="diet" value="10" onclick="getDiet(this.value)">High sugar
+            </ul>
+            <div>
+                <!--<button onclick="calculate()" id="calculate">Calculate</button>-->
+                <button type="submit" onclick="calculate()"> Submit</button>
+            </div>
+            </fieldset>
+            <fieldset id="lowrisk">Your results show that you currently have a low risk of developing diabetes.
+                However, it is important that you maintain a healthy
+                lifestyle in terms of diet and exercise.
+             </fieldset>
+            <fieldset id="mediumrisk">Your results show that you currently have
+                a medium risk of developing diabetes. For more information
+                on your risk factors, and what to do about them, please
+                visit our diabetes advice website at http://www.zha.org.zd.
+            </fieldset>
+            <fieldset id="highrisk">Your results show that you currently have
+                a HIGH risk of developing diabetes. [Your main risk factors
+                are your BMI and your diet.] We advise that you contact the
+                Health Authority to discuss your risk factors as soon as
+                you can. Please fill in our <a href="contactform.html">contact form</a> and a member of the
+                Health Authority Diabetes Team will be in contact with you.
+            </fieldset>
+    </form>
+</body>
+</html>

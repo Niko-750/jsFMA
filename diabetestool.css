@@ -1,0 +1,27 @@
+body{
+    background-color: #eeeeee
+}
+form{
+    background-color: #F7F7F7;
+}
+#lowrisk{
+    display: none;
+}
+#mediumrisk{
+    display: none;
+}
+#highrisk{
+    display:none;
+}
+.list{
+    margin: 10px auto;
+    max-width: 700px;
+    padding: 20px 12px 10px 20px;
+    font: 13px "Lucida Sans Unicode", "Lucida Bright", sans-serif;
+}
+.list label{
+    margin:0 0 3px 0;
+    padding:0px;
+    display:block;
+    font-weight: bold;
+}
